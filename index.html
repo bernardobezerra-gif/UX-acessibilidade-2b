@@ -1,17 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"
-<title>Segurança Digital para Idosos</title>
-<link rel="stylesheet" href="style.css">
-</head>
-</title>
-</head>
-<body>
-    
-</body>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Projeto de UX e acessibilidade com foco em interfaces inclusivas e acessíveis."
+    />
+    <title>UX e acessibilidade</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="hero" aria-labelledby="titulo-principal">
+      <div class="hero__content">
+        <p class="eyebrow">UX e acessibilidade</p>
+        <h1 id="titulo-principal">Desenvolvendo interfaces inclusivas para todos</h1>
+        <p class="hero__text">
+          Uma boa experiência digital não é só bonita: ela precisa ser clara,
+          previsível e utilizável por diferentes perfis de pessoas.
+        </p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#principios">Ver princípios</a>
+          <button class="button button--secondary" id="themeToggle" type="button" aria-pressed="false">
+            Ativar alto contraste
+          </button>
+        </div>
+        <p class="hero__note" id="statusMessage" role="status" aria-live="polite">
+          Modo de leitura padrão ativado.
+        </p>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="section" id="principios" aria-labelledby="principios-title">
+        <div class="section__heading">
+          <p class="eyebrow">Princípios</p>
+          <h2 id="principios-title">O que faz uma interface ser inclusiva?</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Clareza</h3>
+            <p>Texto simples, linguagem direta e instruções objetivas ajudam na compreensão.</p>
+          </article>
+          <article class="card">
+            <h3>Contraste</h3>
+            <p>Cores com boa diferenciação melhoram a legibilidade para várias condições visuais.</p>
+          </article>
+          <article class="card">
+            <h3>Navegação intuitiva</h3>
+            <p>Estruturas lógicas e elementos bem posicionados reduzem esforço e confusão.</p>
+          </article>
+          <article class="card">
+            <h3>Feedback claro</h3>
+            <p>Mensagens e estados visuais confirmam ações e orientam o usuário.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--alt" aria-labelledby="checklist-title">
+        <div class="section__heading">
+          <p class="eyebrow">Checklist</p>
+          <h2 id="checklist-title">Boas práticas para implementar</h2>
+        </div>
+
+        <div class="content-grid">
+          <div class="panel">
+            <h3>Itens essenciais</h3>
+            <ul class="checklist">
+              <li>Use títulos e subtítulos com hierarquia correta.</li>
+              <li>Crie foco visível para navegação por teclado.</li>
+              <li>Adicione texto alternativo em imagens relevantes.</li>
+              <li>Garanta contraste adequado entre texto e fundo.</li>
+              <li>Ofereça feedback claro para ações e erros.</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>Perguntas frequentes</h3>
+            <div class="faq-item">
+              <button class="faq-question" id="faq-btn-1" type="button" aria-expanded="false" aria-controls="faq-1">
+                Como garantir contraste adequado?
+              </button>
+              <div class="faq-answer" id="faq-1" role="region" aria-labelledby="faq-btn-1" hidden>
+                <p>Prefira combinações com forte diferença entre fundo e texto e teste em telas diferentes.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" id="faq-btn-2" type="button" aria-expanded="false" aria-controls="faq-2">
+                Por que a semântica importa?
+              </button>
+              <div class="faq-answer" id="faq-2" role="region" aria-labelledby="faq-btn-2" hidden>
+                <p>Estruturas semânticas ajudam tecnologias assistivas a interpretar corretamente o conteúdo.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" id="faq-btn-3" type="button" aria-expanded="false" aria-controls="faq-3">
+                O que é um bom feedback para o usuário?
+              </button>
+              <div class="faq-answer" id="faq-3" role="region" aria-labelledby="faq-btn-3" hidden>
+                <p>Mensagens claras, visíveis e imediatas reduzem erros e aumentam a confiança do usuário.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="atividade-title">
+        <div class="section__heading">
+          <p class="eyebrow">Atividade</p>
+          <h2 id="atividade-title">Desafio rápido de inclusão</h2>
+        </div>
+
+        <form class="feedback-form" novalidate>
+          <label for="email">E-mail para receber dicas</label>
+          <input id="email" name="email" type="email" placeholder="seu@email.com" required />
+          <button class="button button--primary" type="submit">Enviar</button>
+          <p class="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>
